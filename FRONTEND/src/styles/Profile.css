@@ -1,0 +1,235 @@
+/* ========================================
+   Profile Styles - Matching Dashboard Design
+   ======================================== */
+
+   .profile-wrapper {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 0px;
+  }
+  
+  /* Gradient Header */
+  .profile-header {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    padding: 24px 40px;
+    color: white;
+  }
+  
+  .profile-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  /* Main Container */
+  .profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Profile Section */
+  .profile-section {
+    background: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Avatar Section */
+  .profile-avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .avatar-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  }
+  
+  .btn-change-photo {
+    padding: 10px 24px;
+    background-color: #f7fafc;
+    color: #2d3748;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-change-photo:hover {
+    background-color: #edf2f7;
+    border-color: #cbd5e0;
+  }
+  
+  /* Form Styles */
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d3748;
+  }
+  
+  .form-group input {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #2d3748;
+    transition: all 0.2s ease;
+    outline: none;
+  }
+  
+  .form-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+  
+  .form-group input:hover {
+    border-color: #cbd5e0;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 16px 0;
+  }
+  
+  /* Info Cards */
+  .account-section,
+  .billing-section {
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .info-card {
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .info-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+  }
+  
+  .info-value {
+    font-size: 14px;
+    color: #2d3748;
+    text-align: right;
+  }
+  
+  /* Save Button */
+  .btn-save {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+  
+  .btn-save:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+  
+  .btn-save:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-header {
+      padding: 20px 24px;
+    }
+  
+    .profile-header h1 {
+      font-size: 20px;
+    }
+  
+    .profile-container {
+      padding: 24px 16px;
+    }
+  
+    .profile-section {
+      padding: 24px 16px;
+    }
+  
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .avatar-circle {
+      width: 100px;
+      height: 100px;
+      font-size: 40px;
+    }
+  
+    .info-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+  
+    .info-value {
+      text-align: left;
+    }
+  
+    .btn-save {
+      width: 100%;
+    }
+  }

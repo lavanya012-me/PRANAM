@@ -1,0 +1,199 @@
+/* ========================================
+   Audience Targeting Styles - Matching Dashboard Design
+   ======================================== */
+
+   .targeting-wrapper {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 0px;
+  }
+  
+  /* Gradient Header */
+  .targeting-header {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    padding: 24px 40px;
+    color: white;
+  }
+  
+  .targeting-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  /* Main Container */
+  .targeting-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Form Section */
+  .targeting-section {
+    background: white;
+    border-radius: 8px;
+    padding: 34px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 32px 0;
+  }
+  
+  /* Form Styles */
+  .targeting-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0;
+  }
+  
+  .form-input,
+  .form-select {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #2d3748;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+  }
+  
+  .form-input:focus,
+  .form-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+  
+  .form-input::placeholder {
+    color: #a0aec0;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* AI Suggestions */
+  .ai-suggestions {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 8px;
+  }
+  
+  .suggestions-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 8px 0;
+  }
+  
+  .suggestions-text {
+    font-size: 14px;
+    color: #718096;
+    margin: 0 0 16px 0;
+  }
+  
+  .suggestion-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  }
+  
+  /* Primary Button */
+  .primary-button {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0px;
+    position: absolute;
+  top: 140px;
+  right: 120px;
+  }
+  
+  .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .targeting-header {
+      padding: 20px 24px;
+    }
+  
+    .targeting-header h1 {
+      font-size: 20px;
+    }
+  
+    .targeting-container {
+      padding: 24px 16px;
+    }
+  
+    .targeting-section {
+      padding: 24px 16px;
+    }
+  
+    .section-heading {
+      font-size: 20px;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  
+    .ai-suggestions {
+      padding: 20px 16px;
+    }
+  
+    .suggestions-title {
+      font-size: 16px;
+    }
+  
+    .primary-button {
+      width: 100%;
+    }
+  }

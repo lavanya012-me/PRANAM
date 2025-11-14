@@ -1,0 +1,259 @@
+/* ========================================
+   Dashboard Styles - Matching Image Design
+   ======================================== */
+
+   .dashboard-wrapper {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 0px;
+  }
+  
+  /* Gradient Header */
+  .dashboard-header {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    padding: 24px 40px;
+    color: white;
+  }
+  
+  .dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  /* Main Container */
+  .dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Analytics Section */
+  .analytics-section {
+    background: white;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 32px 0;
+  }
+  
+  /* Stats Cards Grid */
+  .stats-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  
+  .metric-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .metric-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 12px 0;
+  }
+  
+  .metric-value {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 8px 0;
+    line-height: 1;
+  }
+  
+  .metric-change {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .metric-change.positive {
+    color: #48bb78;
+  }
+  
+  .metric-change.negative {
+    color: #f56565;
+  }
+  
+  /* Recent Campaigns Section */
+  .recent-campaigns-section {
+    margin-top: 32px;
+  }
+  
+  .campaigns-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 24px 0;
+  }
+  
+  .campaigns-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+  }
+  
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+  }
+  
+  .empty-message {
+    font-size: 16px;
+    color: #718096;
+    margin: 0 0 24px 0;
+  }
+  
+  .primary-button {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+  
+  /* Campaigns Table */
+  .campaigns-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .campaign-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .campaign-row:hover {
+    background-color: #f7fafc;
+  }
+  
+  .campaign-details {
+    flex: 1;
+  }
+  
+  .campaign-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2d3748;
+  }
+  
+  .campaign-status-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .status-badge.status-scheduled {
+    background-color: #e6f4ff;
+    color: #1890ff;
+  }
+  
+  .status-badge.status-active {
+    background-color: #d4f4dd;
+    color: #22c55e;
+  }
+  
+  .status-badge.status-draft {
+    background-color: #f3f4f6;
+    color: #6b7280;
+  }
+  
+  .status-badge.status-completed {
+    background-color: #f0fdf4;
+    color: #16a34a;
+  }
+  
+  .status-badge.status-paused {
+    background-color: #fef3c7;
+    color: #d97706;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-header {
+      padding: 20px 24px;
+    }
+  
+    .dashboard-header h1 {
+      font-size: 20px;
+    }
+  
+    .dashboard-container {
+      padding: 24px 16px;
+    }
+  
+    .analytics-section {
+      padding: 24px 16px;
+    }
+  
+    .stats-cards-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  
+    .metric-value {
+      font-size: 36px;
+    }
+  
+    .section-heading {
+      font-size: 20px;
+    }
+  
+    .campaigns-heading {
+      font-size: 18px;
+    }
+  
+    .campaign-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  
+    .campaign-status-container {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }

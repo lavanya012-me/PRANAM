@@ -1,0 +1,369 @@
+/* ========================================
+   Campaign Styles - Matching Dashboard Design
+   ======================================== */
+
+   .campaign-wrapper {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 0;
+  }
+  
+  /* Gradient Header */
+  .campaign-header {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    padding: 24px 40px;
+    color: white;
+    position: relative;
+  }
+  
+  .campaign-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  /* IMPORTANT: Hide any buttons injected by parent components in header */
+  .campaign-header button,
+  .campaign-header .create-campaign-btn,
+  .campaign-header .primary-button {
+    display: none !important;
+  }
+  
+  /* Main Container */
+  .campaign-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Campaign Form Section */
+  .campaign-form-section {
+    background: white;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 32px 0;
+  }
+  
+  /* Form Styles */
+  .campaign-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    font-family: inherit;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #a0aec0;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Form Row (2 columns) */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  /* AI Generate Button */
+  .ai-generate-button {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    color: #667eea;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+  }
+  
+  .ai-generate-button:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0.25) 100%);
+    transform: translateY(-2px);
+  }
+  
+  .ai-generate-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Generated Content Box */
+  .generated-content-box {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  
+  .generated-content-box h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 16px 0;
+  }
+  
+  .content-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .content-preview p {
+    margin: 0;
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  
+  .content-preview strong {
+    color: #2d3748;
+    font-weight: 600;
+  }
+  
+  .content-preview .hashtags {
+    color: #667eea;
+    font-weight: 500;
+  }
+  
+  /* File Upload Area */
+  .file-upload-area {
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    padding: 48px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f7fafc;
+  }
+  
+  .file-upload-area:hover {
+    border-color: #667eea;
+    background-color: rgba(102, 126, 234, 0.05);
+  }
+  
+  .upload-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+  
+  .upload-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 8px 0;
+  }
+  
+  .upload-hint {
+    font-size: 14px;
+    color: #718096;
+    margin: 0;
+  }
+  
+  /* Media Preview Box */
+  .media-preview-box {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    background-color: #f7fafc;
+  }
+  
+  .preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .preview-header h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0;
+  }
+  
+  .remove-media-btn {
+    background-color: #fed7d7;
+    color: #c53030;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .remove-media-btn:hover {
+    background-color: #fc8181;
+    color: white;
+  }
+  
+  .preview-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .preview-content img,
+  .preview-content video {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+  
+  .file-name {
+    font-size: 14px;
+    color: #4a5568;
+    margin: 0;
+    word-break: break-all;
+  }
+  
+  /* Action Buttons - Create Campaign (large) + Cancel (small) side by side */
+  .form-actions {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    margin-top: 24px;
+  }
+  
+  .primary-button {
+    flex: 1;
+    background: #4169E1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-button:hover:not(:disabled) {
+    background: #3558c7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(65, 105, 225, 0.3);
+  }
+  
+  .primary-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .secondary-button {
+    padding: 14px 32px;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 120px;
+  }
+  
+  .secondary-button:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .campaign-header {
+      padding: 20px 24px;
+    }
+  
+    .campaign-header h1 {
+      font-size: 20px;
+    }
+  
+    .campaign-container {
+      padding: 24px 16px;
+    }
+  
+    .campaign-form-section {
+      padding: 24px 16px;
+    }
+  
+    .section-heading {
+      font-size: 20px;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  
+    .form-actions {
+      flex-direction: column-reverse;
+      gap: 12px;
+    }
+  
+    .primary-button,
+    .secondary-button {
+      width: 100%;
+      min-width: unset;
+    }
+  
+    .ai-generate-button {
+      width: 100%;
+    }
+  
+    .file-upload-area {
+      padding: 32px 16px;
+    }
+  
+    .preview-content img,
+    .preview-content video {
+      max-height: 300px;
+    }
+  }

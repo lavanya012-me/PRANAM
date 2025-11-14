@@ -1,0 +1,376 @@
+/* ========================================
+   frontend/src/styles/Layout.css
+   Updated to match dashboard design
+   ======================================== */
+
+   .layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f5f5;
+  }
+  
+  /* ========== Sidebar ========== */
+  .sidebar {
+    width: 300px; /* Increased from 250px to 300px */
+    background: #1e293b;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+  }
+  
+  /* ========== Logo & Title ========== */
+  .sidebar-header {
+    padding: 0 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-container {
+    flex-shrink: 0;
+  }
+  
+  .logo-container svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+  
+  .app-title h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #60a5fa;
+  }
+  
+  .app-title .highlight {
+    color: #60a5fa;
+  }
+  
+  /* ========== Navigation ========== */
+  .sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .nav-item:hover {
+    background: #334155;
+    color: #ffffff;
+  }
+  
+  .nav-item.active {
+    background: #1e40af;
+    color: #ffffff;
+    border-left: 4px solid #60a5fa;
+  }
+  
+  .nav-item.active::before {
+    display: none;
+  }
+  
+  .nav-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-text {
+    flex: 1;
+  }
+  
+  /* ========== User Section ========== */
+  .sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+  }
+  
+  .user-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 8px;
+    margin: 0 10px;
+  }
+  
+  .user-section:hover {
+    background: #334155;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #60a5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #60a5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .user-info {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .user-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .user-email {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .dropdown-arrow {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+  
+  .user-dropdown {
+    margin-top: 8px;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    padding-left: 20px;
+    box-shadow: none;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+    border-radius: 0;
+  }
+  
+  .dropdown-item:hover {
+    background: #334155;
+    color: #ffffff;
+  }
+  
+  .dropdown-item.logout {
+    color: #94a3b8;
+  }
+  
+  .dropdown-item.logout:hover {
+    background: #334155;
+    color: #ffffff;
+  }
+  
+  .dropdown-icon {
+    font-size: 1rem;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ========== Main Content ========== */
+  .main-content {
+    flex: 1;
+    margin-left: 300px; /* Increased from 250px to 300px to match sidebar width */
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .top-header {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    padding: 25px 40px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .header-left .page-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 3px;
+  }
+  
+  .header-right {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  
+  .icon-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  
+  
+  /* ========== Responsive ========== */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 70px;
+      padding: 20px 10px;
+    }
+  
+    .sidebar-header {
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 10px 30px;
+    }
+  
+    .app-title {
+      display: none;
+    }
+  
+    .nav-text {
+      display: none;
+    }
+  
+    .nav-item {
+      justify-content: center;
+      padding: 12px;
+    }
+  
+    .user-info {
+      display: none;
+    }
+  
+    .dropdown-arrow {
+      display: none;
+    }
+  
+    .user-section {
+      justify-content: center;
+      padding: 10px;
+    }
+  
+    .main-content {
+      margin-left: 70px;
+    }
+  
+    .content-wrapper {
+      padding: 20px;
+    }
+  
+    .top-header {
+      padding: 20px;
+    }
+  
+    .header-left .page-title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* ========== Scrollbar ========== */
+  .sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+  }
+
+  /* Add this to your Layout.css file */
+
+/* Full width layout when sidebar is hidden */
+.main-content.full-width {
+  margin-left: 0;
+  width: 100%;
+}
+
+/* Ensure onboarding page takes full width */
+.layout:has(.main-content.full-width) {
+  grid-template-columns: 1fr;
+}
