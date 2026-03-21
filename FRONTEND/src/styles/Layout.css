@@ -374,3 +374,53 @@
 .layout:has(.main-content.full-width) {
   grid-template-columns: 1fr;
 }
+.rocket-img {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 120px;
+  animation: bounce 2s infinite;
+}
+
+.robot-img {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 150px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.rocket-img {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 120px;
+  animation: bounce 2s infinite;
+}
+
+.robot-img {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 150px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}

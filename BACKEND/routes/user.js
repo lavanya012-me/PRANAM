@@ -218,6 +218,7 @@ router.delete('/account', protect, async (req, res) => {
       message: error.message
     });
   }
+  
 });
 
 module.exports = router;

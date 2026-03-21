@@ -1,6 +1,6 @@
 // ========================================
 // frontend/src/components/Auth/Register.js
-// UPDATED with matching Login.js design
+// Using public/ assets (fixed filenames)
 // ========================================
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -50,12 +50,16 @@ const Register = () => {
   };
 
   return (
-    <div className="login-container">
+    <div 
+      className="login-container" 
+      style={{ backgroundImage: "url('/background1.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
       <div className="login-wrapper">
         {/* Left Side - Welcome Section */}
         <div className="login-left">
           <div className="logo-section">
             <div className="logo-container">
+              {/* SVG logo */}
               <svg width="60" height="60" viewBox="0 0 200 200" fill="none">
                 <circle cx="100" cy="100" r="90" fill="#FFFFFF" opacity="0.2"/>
                 <path d="M100 50 L120 90 L160 90 L130 115 L145 155 L100 130 L55 155 L70 115 L40 90 L80 90 Z" fill="#FFFFFF"/>
@@ -101,6 +105,10 @@ const Register = () => {
           <div className="bottom-text">
             Your success story begins here
           </div>
+
+          {/* Decorative images */}
+          <img src="/Rocket.png" alt="Rocket" className="rocket-img" />
+          <img src="/robo1.png" alt="Robot" className="robo1-img" />
         </div>
 
         {/* Right Side - Register Form */}

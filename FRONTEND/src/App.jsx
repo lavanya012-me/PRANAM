@@ -4,31 +4,26 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider } from './context/AuthContext';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 // Auth Components
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import ForgotPassword from './components/Auth/ForgotPassword';
-
 // Layout
 import Layout from './components/Layout/Layout';
-
 // Pages
 import Onboarding from './components/Pages/Onboarding';
 import Profile from './components/Pages/Profile';
 import Settings from './components/Pages/Settings';
 import Notifications from './components/Pages/Notifications';
-
 // Dashboard Components
 import Dashboard from './components/Dashboard/Dashboard';
 import CreateCampaign from './components/Dashboard/CreateCampaign';
 import CampaignScheduling from './components/Dashboard/CampaignScheduling';
 import AudienceTargeting from './components/Dashboard/AudienceTargeting';
 import CampaignList from './components/Dashboard/CampaignList';
-
 import './App.css';
 import './styles/DarkMode.css';
-
+<h1 className="text-4xl font-bold text-blue-500">Hello Tailwind!</h1>
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
@@ -161,6 +156,7 @@ function App() {
             draggable
             pauseOnHover
           />
+      
         </div>
       </Router>
     </AuthProvider>
