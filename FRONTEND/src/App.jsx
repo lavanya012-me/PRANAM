@@ -23,7 +23,6 @@ import AudienceTargeting from './components/Dashboard/AudienceTargeting';
 import CampaignList from './components/Dashboard/CampaignList';
 import './App.css';
 import './styles/DarkMode.css';
-<h1 className="text-4xl font-bold text-blue-500">Hello Tailwind!</h1>
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
@@ -49,7 +48,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="App">
+        <>
           <Routes>
             {/* Public Routes */}
             <Route path="/login" element={<Login />} />
@@ -60,9 +59,9 @@ function App() {
             <Route 
               path="/onboarding" 
               element={
-                <ProtectedRoute>
+             
                   <Onboarding />
-                </ProtectedRoute>
+                
               } 
             />
             
@@ -70,9 +69,9 @@ function App() {
             <Route 
               path="/dashboard" 
               element={
-                <ProtectedRoute>
+             
                   <Dashboard />
-                </ProtectedRoute>
+                
               } 
             />
             
@@ -156,8 +155,8 @@ function App() {
             draggable
             pauseOnHover
           />
-      
-        </div>
+
+        </>
       </Router>
     </AuthProvider>
   );

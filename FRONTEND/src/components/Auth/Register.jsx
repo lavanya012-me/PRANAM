@@ -50,10 +50,7 @@ const Register = () => {
   };
 
   return (
-    <div 
-      className="login-container" 
-      style={{ backgroundImage: "url('/background1.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-    >
+    <div className="login-container">
       <div className="login-wrapper">
         {/* Left Side - Welcome Section */}
         <div className="login-left">
@@ -89,26 +86,18 @@ const Register = () => {
 
           <div className="features-list">
             <div className="feature-item">
-              <span className="feature-icon">⚡</span>
+              <span className="feature-icon">✓</span>
               <span>Quick Setup Process</span>
             </div>
             <div className="feature-item">
-              <span className="feature-icon">🤖</span>
+              <span className="feature-icon">☁</span>
               <span>AI-Powered Campaigns</span>
             </div>
             <div className="feature-item">
-              <span className="feature-icon">📈</span>
+              <span className="feature-icon">☆</span>
               <span>Advanced Analytics</span>
             </div>
           </div>
-
-          <div className="bottom-text">
-            Your success story begins here
-          </div>
-
-          {/* Decorative images */}
-          <img src="/Rocket.png" alt="Rocket" className="rocket-img" />
-          <img src="/robo1.png" alt="Robot" className="robo1-img" />
         </div>
 
         {/* Right Side - Register Form */}

@@ -52,7 +52,6 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-wrapper">
-        {/* Left Side - Welcome Section */}
         <div className="login-left">
           <div className="logo-section">
             <div className="logo-container">
@@ -76,40 +75,34 @@ const Login = () => {
           </div>
           
           <div className="welcome-content">
-            <h2>Welcome Back!</h2>
+            <h2>Start Your Journey</h2>
             <p>
-              Unlock the power of AI-driven Facebook campaigns. Create, manage, 
-              and optimize your advertising with intelligent automation and 
-              data-driven insights.
+              Create your account and unlock the power of AI-driven Facebook campaigns.
+              Join thousands of marketers who trust our platform for their advertising needs.
             </p>
           </div>
 
           <div className="features-list">
             <div className="feature-item">
-              <span className="feature-icon">✨</span>
-              <span>AI-Powered Campaign Creation</span>
+              <span className="feature-icon">✓</span>
+              <span>Quick Setup Process</span>
             </div>
             <div className="feature-item">
-              <span className="feature-icon">🎯</span>
-              <span>Smart Audience Targeting</span>
+              <span className="feature-icon">☁</span>
+              <span>AI-Powered Campaigns</span>
             </div>
             <div className="feature-item">
-              <span className="feature-icon">📊</span>
-              <span>Real-time Analytics</span>
+              <span className="feature-icon">☆</span>
+              <span>Advanced Analytics</span>
             </div>
-          </div>
-
-          <div className="bottom-text">
-            Transform your advertising strategy today
           </div>
         </div>
 
-        {/* Right Side - Login Form */}
         <div className="login-right">
           <div className="login-form-container">
             <div className="form-header">
               <h2>Login</h2>
-              <p>Welcome! Login to get amazing discounts and offers only for you.</p>
+              <p>Sign in to continue creating and managing your Facebook ad campaigns.</p>
             </div>
 
             <form onSubmit={handleSubmit} className="login-form">
